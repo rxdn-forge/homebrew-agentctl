@@ -6,8 +6,8 @@
 class Agentctl < Formula
   desc "Manage containerized coding-agent CLIs (Claude, Codex, Gemini) — front half of a Control Plane harness"
   homepage "https://github.com/rxdn-forge/agentctl-dist"
-  url "https://github.com/rxdn-forge/agentctl-dist/releases/download/v0.6.30/agentctl-0.6.30-py3-none-any.whl", using: :nounzip
-  sha256 "950b41ca0bbc8130dac72ffbd187f32c5d6c0903c7f16fbf6aa8fcc186eff80a"
+  url "https://github.com/rxdn-forge/agentctl-dist/releases/download/v0.6.31/agentctl-0.6.31-py3-none-any.whl", using: :nounzip
+  sha256 "2fddd74a7bd9caed1b3539d57ba41abba5502c2948c29c8c97a7bab4bb8a1b89"
   license "MIT"
 
   depends_on "python@3.11"
@@ -22,6 +22,6 @@ class Agentctl < Formula
   end
 
   test do
-    assert_match "0.6.30", shell_output("#{bin}/agentctl --version")
+    assert_match "0.6.31", shell_output("#{bin}/agentctl --version")
   end
 end
