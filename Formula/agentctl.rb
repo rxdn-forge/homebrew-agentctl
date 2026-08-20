@@ -13,7 +13,7 @@ class Agentctl < Formula
   depends_on "python@3.11"
 
   def install
-    venv = virtualenv_create(libexec, "python3.11")
+    virtualenv_create(libexec, "python3.11")
     # cached_download is the sha256-verified wheel; pip resolves runtime deps
     # from PyPI. (No `resource` stanzas needed — and none would be honored for
     # a wheel install.)
