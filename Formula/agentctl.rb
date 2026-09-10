@@ -6,8 +6,8 @@
 class Agentctl < Formula
   desc "Manage containerized coding-agent CLIs for a Control Plane harness"
   homepage "https://github.com/rxdn-forge/agentctl-dist"
-  url "https://github.com/rxdn-forge/agentctl-dist/releases/download/v0.6.121/agentctl-0.6.121-py3-none-any.whl", using: :nounzip
-  sha256 "8baff346d3865cf4444dbead7bb8740f82e046862dafce8b8a2b6d0f273119e7"
+  url "https://github.com/rxdn-forge/agentctl-dist/releases/download/v0.6.122/agentctl-0.6.122-py3-none-any.whl", using: :nounzip
+  sha256 "260ac032bdcc86e76518c43702e4a3a6a5acaa038c46125ab80eaa616a5c6ae6"
   license "MIT"
 
   depends_on "python@3.11"
@@ -23,8 +23,8 @@ class Agentctl < Formula
   end
 
   test do
-    assert_match "0.6.121", shell_output("#{bin}/agentctl --version")
-    assert_match "0.6.121", shell_output("#{bin}/actl --version")
+    assert_match "0.6.122", shell_output("#{bin}/agentctl --version")
+    assert_match "0.6.122", shell_output("#{bin}/actl --version")
     assert_match "Ed25519", shell_output("#{bin}/agentctl signing runtime")
   end
 end
